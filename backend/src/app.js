@@ -1,14 +1,17 @@
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
-const authRoutes   = require('./routes/authRoutes');
+const authRoutes = require('./routes/authRoutes');
 const uploadRoutes = require('./routes/uploadRoutes');
 const reportRoutes = require('./routes/reportRoutes');
 
 const app = express();
 
 // CORS — allow any origin in development
-app.use(cors());
+app.use(cors({
+  origin: ['https://stackhut.shop', 'http://localhost:5173'],
+  credentials: true
+}));
 
 // Request logging
 app.use(morgan('dev'));
@@ -23,7 +26,7 @@ app.get('/health', (req, res) => {
 });
 
 // API Routes
-app.use('/api/auth',   authRoutes);
+app.use('/api/auth', authRoutes);
 app.use('/api/upload', uploadRoutes);
 
 // Phase 4.5+ routes

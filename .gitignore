@@ -1,7 +1,7 @@
-# ─── Environment Variables (NEVER commit secrets) ────────────────────────────
-/src/.env
-/src/.env.*
-/src/.env.example
+# ─── Environment Variables ─────────────────────────────────────────────────────
+.env
+.env.*
+.env.example
 
 # ─── Node.js ─────────────────────────────────────────────────────────────────
 node_modules/

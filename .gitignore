@@ -1,0 +1,50 @@
+# ─── Environment Variables (NEVER commit secrets) ────────────────────────────
+.env
+.env.*
+.env.example
+
+# ─── Node.js ─────────────────────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# ─── Build Output ────────────────────────────────────────────────────────────
+dist/
+build/
+
+# ─── Vite ────────────────────────────────────────────────────────────────────
+frontend/.vite/
+frontend/node_modules/.vite/
+
+# ─── Logs ────────────────────────────────────────────────────────────────────
+*.log
+logs/
+backend/build_error.log
+backend/lint.json
+frontend/build_error.log
+
+# ─── OS Files ────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── IDE / Editor ────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.user
+
+# ─── Docker ──────────────────────────────────────────────────────────────────
+# Keep Dockerfile and .dockerignore, but ignore local docker volumes
+.docker/
+
+# ─── AWS ─────────────────────────────────────────────────────────────────────
+.aws/
+*.pem
+
+# ─── Test / Temp ─────────────────────────────────────────────────────────────
+coverage/
+.nyc_output/
+tmp/

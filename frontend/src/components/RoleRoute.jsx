@@ -1,0 +1,18 @@
+import { Navigate, Outlet } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+
+/**
+ * Restricts access to routes based on user role.
+ * Must be nested inside a <ProtectedRoute> layout.
+ */
+const RoleRoute = ({ allowedRoles }) => {
+  const { user } = useAuth();
+
+  if (!user || !allowedRoles.includes(user.role)) {
+    return <Navigate to="/dashboard" replace />;
+  }
+
+  return <Outlet />;
+};
+
+export default RoleRoute;
